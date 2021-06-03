@@ -1,0 +1,16 @@
+{
+  "name": "tauli-app-be",
+  "version": "1.0.0",
+  "description": "Back End for tauli-app ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "joi": "^17.4.0"
+  }
+}
