@@ -3,7 +3,7 @@
 // https://www.youtube.com/watch?v=pKd0Rpw7O48
 //
 
-//const Joi = require('joi');
+const Joi = require('joi');
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -230,8 +230,7 @@ app.post('/api/users', (req, res) => {
 
 app.post('/api/problems', (req, res) => {
   const { error } = validateProblem(req.body);
-  //if (error) return res.status(400).send(error.details[0].message);
-  if (error) return res.status(400).send(error);
+  if (error) return res.status(400).send(error.details[0].message);
 
   const latestId = datajson.problems[datajson.problems.length - 1].id
   const problem = {
@@ -298,16 +297,7 @@ app.listen(port, () => console.log(`Server started on port ${port}...`));
 
 
 // Tools -----------------
-
-function validateUser(user) {
-  return true;
-}
-function validateProblem(problem) {
-  return true;
-}
-
 // ValidateUser fn() ---------
-/*
 function validateUser(user) {
   const schema = Joi.object({
     id: Joi.number(),
@@ -363,4 +353,3 @@ function validateProblem(problem) {
 
   return schema.validate(problem);
 }
-*/
