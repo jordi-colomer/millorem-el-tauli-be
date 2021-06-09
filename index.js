@@ -104,7 +104,7 @@ let datajson = {
       "likes": [
         "silvia.pou@tauli.cat"
       ],
-      "status": "¡Solucionat!",
+      "status": "Acceptada",
       "i3ptOwner": "silvia.pou@tauli.cat",
       "annexes": [],
       "comments": [
@@ -141,7 +141,7 @@ let datajson = {
         "joan.fernandez@tauli.cat",
         "silvia.pou@tauli.cat"
       ],
-      "status": "Acceptada",
+      "status": "¡Solucionat!",
       "i3ptOwner": "silvia.pou@tauli.cat",
       "annexes": [
         {
