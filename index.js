@@ -2,6 +2,8 @@
 // How to build a REST API with Node js & Express
 // https://www.youtube.com/watch?v=pKd0Rpw7O48
 //
+// https://dashboard.heroku.com/apps/millorem-el-tauli-be/deploy/github
+//
 
 const Joi = require('joi');
 const express = require('express');
@@ -58,8 +60,8 @@ let datajson = {
     {
       "id": 1,
       "owner": "anna.vila@tauli.cat",
-      "title": "When Forty Winters Shall Besiege Thy Brow",
-      "description": "When forty winters have attacked your brow and wrinkled your beautiful skin, the pride and impressiveness of your youth, so much admired by everyone now, will have become a worthless, tattered weed. Then, when you are asked where your beauty’s gone and what’s happened to all the treasures you had during your youth, you will have to say only within your own eyes, now sunk deep in their sockets, where there is only a shameful confession of greed and self-obsession. How much more praise you would have deserved if you could have answered, ‘This beautiful child of mine shall give an account of my life and show that I made no misuse of my time on earth,’ proving that his beauty, because he is your son, was once yours! This child would be new-made when you are old and you would see your own blood warm when you are cold.<br><br>But why don’t you use a more effective way of fighting this terrible tyrant, Time? And defend yourself with more effective methods than my useless poems? You are right at the peak of your life, and many maiden gardens, still unplanted, would love to bear you fresh young flowers much more like you than your portrait is. So your children, whose existence ensures your continuance, can give you perpetual life, something which neither Time’s paintbrush nor my poor pen can do. By giving yourself away you will preserve yourself, and so you will live, yourself being the artist who paints you.",
+      "title": "Baixa precisió en resultats d'exàmens laboratoris",
+      "description": "La baixa qualitat o la poca curositat amb la que es realitzen els examens laboratoris ha provocat que un nombre prou alt de professionals ometin certes malalties com l'apendicitis, problemes cardíacs, neuronals, oncològics, etc.",
       "date": "Fri Apr 23 2021 11:25:46 GMT+0200 (CEST)",
       "likes": [
         "joan.fernandez@tauli.cat",
@@ -67,62 +69,55 @@ let datajson = {
       ],
       "status": "Sense tramitar",
       "i3ptOwner": "",
-      "annexes": [],
+      "annexes": [
+        {
+          "id": 1,
+          "owner": "anna.vila@tauli.cat",
+          "docName": "Adjunt d’una prova de laboratori",
+          "docUrl": "http://www.tauli.cat/proves/doc1.doc",
+          "docType": "doc"
+        }
+      ],
       "comments": [
         {
           "id": 1,
           "owner": "ellen.smith@tauli.cat",
-          "description": "Wasteful youth, why do you squander on yourself the riches that you should leave to the world? Nature gives nothing but only makes a loan and, being generous, she lends only to those who are open-hearted. Then, beautiful miser, why do you abuse the generous inheritance given to you to leave to someone else? Unsuccessful money-lender, why do you spend such great sums when you can’t live forever, by thinking of yourself only? You are only cheating yourself, so, when nature calls you away what reasonable account will you be able to give of yourself? Your unused seed will have to be buried with you, which, if used, would live as the administrator of your beauty.",
+          "description": "Et descuides de de la Baixa qualitat en imatges diagnòstiques!",
           "date": "Wed Apr 28 2021 09:12:15 GMT+0200 (CEST)"
         }
       ],
       "solutions": [
         {
           "id": 1,
-          "owner": "anna.vila@tauli.cat",
-          "description": "Time, that so carefully made those beautiful eyes that every other eye gazes at, will become a tyrant to those same lovely eyes and make them ugly; because never-resting time leads summer into hideous winter and destroys it there. Sap is stopped from rising by the frost and the leaves disappear; beauty is covered with snow and all the trees are bare. Then, if summer’s distillation hadn’t been preserved as a prisoner in a glass vial, that summer’s legacy would be lost with that summer’s death. Neither it nor the memory of what it was would remain. But flowers that have been distilled, even though they’ve been destroyed by winter, lose only their outward appearance: their substance lives on sweetly.",
-          "date": "Fri Apr 23 2021 12:48:05 GMT+0200 (CEST)"
-        },
-        {
-          "id": 2,
           "owner": "ellen.smith@tauli.cat",
-          "description": "So don’t let winter’s ragged hand disfigure that summer in you before your essence is distilled. Fill some vial; enrich some woman’s womb with the treasure of your beauty before it dies. The interest from that would not be illegal lending if it made the willing borrower happy, which would happen if the loan was to breed another of yourself. Or ten times better if the interest were ten for one. Ten of yourself would be better than just one of you, with ten of your children existing, making ten images of you. Then what effect could death have if you should die, leaving you alive after your death? Don’t be obstinate because you are far too beautiful to be the victim of death and have only worms as your heirs.",
+          "description": "El material d’anàlisis s’ha quedat enrere en el temps, és antic i cal renovar-lo! així s’evitarien molts problemes de diagnòstic…",
           "date": "Thu Apr 29 2021 11:53:09 GMT+0200 (CEST)"
         }
       ]
     },
     {
       "id": 2,
-      "owner": "anna.vila@tauli.cat",
-      "title": "Look In Thy Glass, And Tell The Face Thous Viewest",
-      "description": "Look in your mirror and tell the face you see that it’s time it should create another If you do not renew yourself you would be depriving the world, and stop some woman from becoming a mother. For where is the lovely woman whose unploughed womb would not appreciate the way you plow your field? Or who is he foolish enough to love himself so much as to neglect reproducing? You are the mirror of your mother, and she is the mirror of you, and in you, she recalls the lovely April of her youth. In the same way, you will see your youth in your own children, in spite of the wrinkles caused by age. But if you live your life avoiding being remembered you will die single and your image will die with you.<br><br>Who will believe my poem in times to come if it were filled with your great qualities? Heaven knows that it’s only like a grave that conceals your qualities, and doesn’t even show half your talents. Even if I had the ability to describe the beauty of your eyes, and write good lines that would enumerate all your gracious qualities, those who read it in the future would say ‘This poet is telling lies: no human face has ever possessed such heavenly beauty,’ so, my pages, yellowed with age, would be scorned like old men who talk nonsense, and the right that you have to such praise would be dismissed as a poet’s exaggeration – the elaborate metre of old-fashioned poems. But if there were a child of yours alive at that time, you would be doubly alive – in the child and in my poem.<br><br>Devouring Time, you may make the lion’s claws blunt and return all creatures to the earth from which they sprang; pull the teeth from the fierce tiger’s jaws, and destroy the phoenix in her fire. Do whatever you like, fast-running Time, to any beautiful fading thing in the world; but I forbid you to commit one heinous crime: oh don’t cut into my love’s beautiful brow, nor draw wrinkles there with your insane pen. As you go on your destructive course spare him as a pattern of beauty for posterity. But, do your worst, old Time. Whatever harm you do my love will remain young forever in my poetry.",
+      "owner": "joan.fernandez@tauli.cat",
+      "title": "Ús indegut de la demanda d'urgències",
+      "description": "Crec que s'hauria de penalitzar el mal ús de la demanda. Les urgències estàn congestionades per un mal triatge. Necessitem idees per a campanyes de sensibilització i educació de la població en l'ús adequat de la urgència o alternatives per a fer-hi front.",
       "date": "Mon Apr 26 2021 17:40:10 GMT+0200 (CEST)",
       "likes": [
         "silvia.pou@tauli.cat"
       ],
       "status": "¡Solucionat!",
       "i3ptOwner": "silvia.pou@tauli.cat",
-      "annexes": [
-        {
-          "id": 1,
-          "owner": "anna.vila@tauli.cat",
-          "docName": "Estructura i pautes en les analitiques",
-          "docUrl": "http://www.tauli.cat/proves/doc2.doc",
-          "docType": "doc"
-        },
-        {
-          "id": 2,
-          "owner": "anna.vila@tauli.cat",
-          "docName": "Organigrama",
-          "docUrl": "http://www.tauli.cat/proves/doc2.pdf",
-          "docType": "pdf"
-        }
-      ],
+      "annexes": [],
       "comments": [
         {
           "id": 1,
+          "owner": "anna.vila@tauli.cat",
+          "description": "Els serveis d'urgència han d'atendre totes les urgències, fins i tot en horari d'atenció continuada i que el personal d'atenció primària s'ha de dedicar a atendre les consultes en centre i domicilis programats.",
+          "date": "Wed Apr 28 2021 10:52:19 GMT+0200 (CEST)"
+        },
+        {
+          "id": 2,
           "owner": "ellen.smith@tauli.cat",
-          "description": "Look! In the east when the glorious sun raises his burning head, all men’s eyes pay tribute to his new, fresh appearance, serving his majesty with looks of awe. And having climbed that steep hill to heaven like a strong youth in the prime of life, mortals still worship his beauty as they watch his golden climb into the sky. But when he staggers away, old and feeble, from his highest point with weary horses, the eyes that were dutiful before, now turn away from him and look elsewhere. So you, yourself, declining from your noonday glory, will die disregarded, unless you beget a son.",
+          "description": "Opino que l'atenció primària ha d'atendre totes les necessitats de la població i l'atenció continuada i les urgències són part d'ella... no crec que se n'estigui fent un mal ús però potser sí que s'hauria de millorar-ne la gestió.",
           "date": "Wed Apr 28 2021 10:52:19 GMT+0200 (CEST)"
         }
       ],
@@ -130,16 +125,16 @@ let datajson = {
         {
           "id": 1,
           "owner": "anna.vila@tauli.cat",
-          "description": "Why do you, who are music to listen to, listen to music sadly? Sweet things don’t quarrel with sweet things, and joyful things delight in joyful things. Why do you love something that you don’t enjoy, or get pleasure from something that causes you pain? If the true harmony of well-tuned sounds, married to each other in counterpoint, offends your ear, it is gently reprimanding you because by staying single you are denying the part you should play. Remember that one string reverberates with the others to produce rich music, like father and child and happy mother in a family, who all sing together in pleasing harmony. Their instrumental performance is a unity, although made up of many parts, and make this point, in music, to you: ‘Being single you will be nothing.’",
+          "description": "S'hauria de crear una taula rodona entre professionals d'urgències per analitzar les necessitats reals  en comú  i recollir les seves propostes per a valorar si la opinió és compartida.",
           "date": "Mon Apr 26 2021 17:52:21 GMT+0200 (CEST)"
         }
       ]
     },
     {
       "id": 3,
-      "owner": "joan.fernandez@tauli.cat",
-      "title": "From Fairest Creatures We Desire Increase",
-      "description": "We want all beautiful creatures to reproduce themselves so that beauty’s flower will not die out; but as an old man dies in time, he leaves a young heir to carry on his memory. But you, concerned only with your own beautiful eyes, feed the bright light of life with self-regarding fuel, making beauty shallow by your preoccupation with your looks. In this you are your own enemy, being cruel to yourself. You who are the world’s most beautiful ornament and the chief messenger of spring, are burying your gifts within yourself And, dear selfish one, because you decline to reproduce, you are actually wasting that beauty. Take pity on the world or else be the glutton who devours, with the grave, what belongs to the world.<br><br>Shall I compare you to a summer’s day? You are more lovely and more moderate: Harsh winds disturb the delicate buds of May, and summer doesn’t last long enough. Sometimes the sun is too hot, and its golden face is often dimmed by clouds. All beautiful things eventually become less beautiful, either by the experiences of life or by the passing of time. But your eternal beauty won’t fade, nor lose any of its quality. And you will never die, as you will live on in my enduring poetry. As long as there are people still alive to read poems this sonnet will live, and you will live in it.",
+      "owner": "anna.vila@tauli.cat",
+      "title": "Exclusions en la universalització i l’accés a la salut pública",
+      "description": "La mala maror que ha generat aquesta instrucció &quot;La instrucció assenyala les migrants com a defraudadores del sistema &quot;, Marea Blanca ha fet que el Departament de Salut se’n replantegés la redacció. “La consellera ha dit en seu parlamentària que, si algun apartat pot donar lloc a una interpretació racista, es canviarà”, recorda Ramentol, que destaca que la voluntat del Govern és que “totes les persones que viuen a Catalunya tinguin garantit l’accés a la sanitat pública, no que es produeixin limitacions”. “Una altra cosa és que també hàgim de perseguir una realitat que existeix: el turisme sanitari”, matisa.  “A Catalunya s’havia aconseguit que, des del moment del padró, s’accedís a l’assistència sanitària. Ara retrocedim, no via padró, però si per l’arrelament”, comenta. Així mateix, la Plataforma posa l’accent en el fet que el decret estableixi que les dones embarassades que no tinguin targeta sanitària “hauran d’acreditar que pateixen una situació d’exclusió davant les treballadores socials dels centres sanitaris si volen ser ateses”. “I només les atenen en qüestions relatives al seu embaràs”, exposa Martínez, que hi afegeix que els menors que no es considerin en alt risc de marginació social i que no estiguin tutelats per organismes d’atenció a la infància i l’adolescència, també quedaran fora de la cobertura sanitària si no tenen la targeta. A més, l’activista recorda que, si fins ara les persones que no estaven empadronades a Catalunya tenien dret a rebre assistència d’urgència si signaven la ‘declaració responsable’, amb el Projecte de decret “es considera que les que tinguin uns ingressos per sobre de la renda de suficiència de Catalunya (538 euros mensuals), i que no estiguin empadronades o no hagin acreditat l’arrelament, podran fer front a les despeses de l’assistència sanitària”. En el cas de l’Hospital Clínic, explica Martínez, l’assistència d’urgència bàsica costa aproximadament 230 euros.",
       "date": "Tue Apr 27 2021 12:16:50 GMT+0200 (CEST)",
       "likes": [
         "ellen.smith@tauli.cat",
@@ -160,29 +155,17 @@ let datajson = {
       "comments": [
         {
           "id": 1,
-          "owner": "anna.vila@tauli.cat",
-          "description": "Is it because you fear to make a widow grieve, that you waste yourself in bachelorhood? Ah, if you should happen to die childless the world will mourn for you like a bereaved widow. The world will be your widow and weep profusely because you have left no copy of yourself behind, while an ordinary widow is able to keep her husband’s memory fresh by looking at her children. Whatever a money-waster spends just moves from one pocket to another and the world continues to enjoy it, but squandered beauty is lost to the world, and by not using it the user destroys it. There is no love for others in the heart of one who murders himself so shamelessly.",
+          "owner": "joan.fernandez@tauli.cat",
+          "description": "La Plataforma per una Atenció Sanitària Universal ha documentat 400 casos d’exclusió sanitària entre el 2012 i el 2018!!!!",
           "date": "Thu Apr 29 2021 17:52:19 GMT+0200 (CEST)"
-        },
-        {
-          "id": 2,
-          "owner": "ellen.smith@tauli.cat",
-          "description": "Out of a sense of shame you, who are so unwilling to provide for the future, should admit that you don’t love anyone. I grant you, if you like, that you are loved by many, but it’s very clear that you don’t love anyone; because, being someone who doesn’t hesitate to conspire against himself, you are determined to murder your potential progeny. You are prepared to end your noble line, which it should be your main concern to maintain. Oh! Change your mind, so that I can change my opinion of you. Do you, the most beautiful creature, want to be the house where hate lives? Be as gracious and generous to your relatives as you are to everyone else, or at least be generous to yourself. Change your mind for my sake so that you will be a noble person and that your beauty will live on in your descendants.",
-          "date": "Wed Apr 28 2021 18:50:39 GMT+0200 (CEST)"
         }
       ],
       "solutions": [
         {
           "id": 1,
-          "owner": "joan.fernandez@tauli.cat",
-          "description": "When I count the chimes of the clock and watch the bright day sunken into terrifying night; when I see violets fading, and black curls all silvered over with white; when I see tall trees which previously offered shade to sheep and cattle but now with no leaves; and the green crops of summer tied up in harvested sheaves covered with scratchy dried out leaves, carried away on a wagon; then I begin to think about the endurance of your beauty and that you will have to decline and decay like everything else because sweet and beautiful things lose their sweetness and beauty and die while watching new sweet and beautiful things taking their place. The only defense against Time’s scythe is to defy him when he takes you away, by having children.",
-          "date": "Fri Apr 30 2021 19:02:11 GMT+0200 (CEST)"
-        },
-        {
-          "id": 2,
           "owner": "ellen.smith@tauli.cat",
-          "description": "I don’t pick my wisdom from the stars, but I think I understand astronomy, although not to predict good or bad luck, or plagues and famines or what the seasons will be like. Nor can I tell fortunes, showing individuals their own moods and their ups and downs, nor tell rulers whether things will go well by frequent predictions from what I see in the heavens. But I get my knowledge from your eyes, and as they are constant stars, I’m able to predict that truth and beauty will thrive together if you would turn your attention from yourself to the reproduction of yourself; otherwise, this is my prediction for you: your death will be the final end of truth and beauty.",
-          "date": "Wed Apr 28 2021 10:02:19 GMT+0200 (CEST)"
+          "description": "Esmento una notícia pel que fa al conflicte: &quot;el director del CatSalut, Adrià Comella, va signar una resolució en què suspenia l’aplicació de la Instrucció 5/2019, que els col·lectius en defensa de la sanitat pública denunciaven a CRÍTIC. La resolució argumenta que la finalitat de la suspensió és garantir la sostenibilitat del sistema sanitari públic, del CatSalut, fins a l’aprovació del corresponent Decret pel qual s’aprovi el reglament de desenvolupament de la Llei 9/2017, que estableix la universalització de l’assistència sanitària amb càrrec a fons públics per mitjà del Servei Català de la Salut i, en el seu cas, es revisi el contingut de la Instrucció en els termes que escaigui &quot;.",
+          "date": "Fri Apr 30 2021 19:02:11 GMT+0200 (CEST)"
         }
       ]
     }
